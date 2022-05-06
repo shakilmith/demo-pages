@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- for development purposes-->
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  
+
+  
+
+  
+
+  
+
+  <title>List 1</title>
+
+  
+
+</head>
+
+<body>
+
+<div id="root">
+
+  
+
+</div>
+
+<script type="text/babel">
+
+  
+
+  function App(){
+
+   
+
+    return (
+
+     <div>
+
+     <h3>List of programing Languages </h3>
+
+     <Languages />
+
+     </div>
+
+      
+
+      
+
+      )
+
+  
+
+  }
+
+  
+
+  function Languages(){
+
+    
+
+    const language =[
+
+      
+
+      {
+
+        id: 1,
+
+        name: "C",
+
+        image: "https://source.unsplash.com/VeBqhCf58QA/150x100",
+
+        description: "C is a popular programing language in recent years.",
+
+        link: "url"
+
+      },
+
+      {
+
+        id: 2,
+
+        name: "C++",
+
+        image: "https://source.unsplash.com/Nmrchx_IVY0/150x100",
+
+        description: "",
+
+        link: "url"
+
+      
+
+      
+
+      },
+
+      
+
+      {
+
+        id: 3,
+
+        name: "Java",
+
+        image: "https://source.unsplash.com/Nmrchx_IVY0/150x100",
+
+        description: "",
+
+        link: "url"
+
+      },
+
+     {
+
+        id: 4,
+
+        name: "Python",
+
+        image: "https://source.unsplash.com/Nmrchx_IVY0/150x100",
+
+        description: "",
+
+        link: "url"
+
+      },
+
+      {
+
+        id: 5,
+
+        name: "Scala",
+
+        image: "https://source.unsplash.com/Nmrchx_IVY0/150x100",
+
+        description: "",
+
+        link: "url"
+
+      }
+
+      
+
+      
+
+      
+
+      ]
+
+    return (
+
+      <div>
+
+      <ol>
+
+      {
+
+        language.map((data)=>(
+
+          <li key={data.id}>
+
+          <h3>{data.name}</h3>
+
+          <br/>
+
+          <img src={data.image} />
+
+          <p>{data.description}</p>
+
+          <a href={data.link}>Know more</a>
+
+          </li>
+
+          ))
+
+      }
+
+      
+
+      </ol>
+
+      
+
+      
+
+      </div>
+
+      
+
+      )
+
+  }
+
+  
+
+  
+
+  ReactDOM.render(<App />,
+
+  document.getElementById('root')
+
+  )
+
+  
+
+</script>
+
+</body>
+
+</html>
+
