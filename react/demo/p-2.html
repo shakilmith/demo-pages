@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- for development purposes-->
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <title>List of programing Languages. </title>
+  
+  <style>
+    html, body{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+       font-size: 14px;
+      line-height: 1.3;
+    }
+  </style>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+<div id="root">
+  
+</div>
+
+
+
+
+
+
+
+
+<script type="text/babel">
+ 
+ 
+ function Languages(){
+   
+   const pLanguages = [
+     {
+       id: 1,
+       logo: "images/c.jpeg",
+       name: "C",
+       description: "Dennis Ritchie at the Bell Telephone Laboratories developed C to be used on the Unix platform. It is a general-purpose, cross-platform, procedural, imperative programming language. It is used for implementing system software and application software and is one of the most-used computer programming languages of today. The development of C++ and C# was influenced by C.",
+       usedFor: " ",
+       url: "https://www.open-std.org/"
+     },
+     {
+       id: 2,
+       logo: "images/cc.jpeg",
+       name: "C++",
+       description: "It consists of a combination of high-level and low-level language features and is hence considered as a middle-level programming language. Bjarne Stroustrup of Bell Labs developed C++ as an extension of the C language. Originally known as ‘C with Classes’, it came to be known as C++ from 1983. It is a multi-paradigm language that supports procedural programming, generic programming, object-oriented programming, and data abstraction. ",
+       usedFor: " ",
+       url: "https://isocpp.org/  "
+     },
+     {
+       id: 3,
+       logo: "images/java.jpeg ",
+       name: "Java",
+       description: "It is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. Compiled Java code can run on all platforms that support Java without the need for recompilation. It is a very popular language of the modern times. ",
+       usedFor: " ",
+       url: "https://www.java.com/en/"
+     },
+     {
+         id: 4,
+         logo: "images/kotlin.jpeg ",
+         name: "Kotlin",
+         description: "Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library, but type inference allows its syntax to be more concise. ",
+         usedFor: "",
+         url: "https://kotlinlang.org/ "
+     },
+     {
+         id: 5,
+         logo: "images/python.jpeg",
+         name: "Python",
+         description: "It is a high-level programming language that supports imperative, object-oriented, and functional programming paradigms. In its features like the dynamic type system and automatic memory management, it is similar to Perl. Originally released in 1991 by Guido van Rossum, a Dutch computer programmer, Python is an open community-based language whose development is managed by the Python Software Foundation. ",
+         usedFor: " ",
+         url: "https://www.python.org/ "
+     },
+     
+     {
+         id: 6,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Scale",
+         description: "The name Scala stands for Scalable Language. It is a multi-paradigm programming language, which offers object-oriented and functional programming features. ",
+         usedFor: " ",
+         url: "http://www.scala-lang.org/ "
+     },
+     {
+         id: 7,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Go",
+         description: "Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency. ",
+         usedFor: " ",
+         url: "https://go.dev/"
+     },
+     
+     {
+         id: 8,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "C#",
+         description: "C Sharp is a multi-paradigm programming language that supports imperative, generic and object-oriented programming. It is a part of the Microsoft .NET Framework. It is similar to C++ in its object-oriented syntax and is also influenced by Java and Delphi. ",
+         usedFor: " ",
+         url: "https://docs.microsoft.com/en-us/dotnet/csharp/ "
+     },
+     {
+         id: 9,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Objective-C",
+         description: "is a reflective object-oriented programming language that adds messaging services to C. ",
+         usedFor: " ",
+         url: "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html "
+     },
+     {
+       id: 10,
+       logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+       name: "Groovy",
+       description: "Apache Groovy is a Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. ",
+       usedFor: " ",
+       url: "https://groovy-lang.org/ "
+     },
+     {
+       id: 11,
+       logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+       name: "Dart",
+       description: "Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications. It is an object-oriented, class-based, garbage-collected language with C-style syntax. ",
+       usedFor: " ",
+       url: "https://dart.dev/ "
+     },
+     
+     {
+        id: 12,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "PHP",
+         description: "PHP is one of the very popularly used general purpose scripting languages. It is developed for creating dynamic web pages and supports a command line interface capability. ",
+         usedFor: " ",
+         url: "https://www.php.net/ "
+     },
+     
+     {
+         id: 13,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Pascal",
+         description: "It is a procedural programming language that was intended to use data structuring and structured programming. Niklaus Wirth, a Swiss computer scientist designed this language and it was named after Blaise Pascal, a French mathematician and philosopher. ",
+         usedFor: " ",
+         url: "https://web.archive.org/web/20151018023934/http://www.pascal-central.com/ppl/chapter3.html "
+     },
+     
+     {
+         id: 14,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Rust",
+         description: "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. It is syntactically similar to C++, but can guarantee memory safety by using a borrow checker to validate references. ",
+         usedFor: " ",
+         url: "http://www.rust-lang.org/ "
+     },
+     {
+      id: 15,
+       logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+       name: "R",
+       description: "R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. Created by statisticians Ross Ihaka and Robert Gentleman, R is used among data miners and statisticians for data analysis and developing statistical software. ",
+       usedFor: " ",
+       url: "https://www.r-project.org/ "
+     },
+     
+     {
+         id: 16,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Swift",
+         description: " Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community.",
+         usedFor: " ",
+         url: "https://www.swift.org/ "
+     },
+     
+     {
+         id: 17,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Fortran",
+         description: "is a procedural, imperative, general purpose computer programming language that works well for scientific computations and numeric operations. After IBM developed it in the 1950s, it soon gained popularity in programming. It is very popular in the field of high-performance computing. It is a structured and compiled programming language that is a subset of Fortran95. Fortran 2003, a revised version of Fortran supports object-oriented programming. ",
+         usedFor: " ",
+         url: "https://fortran-lang.org/ "
+     },
+     {
+         id: 18,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Julia",
+         description: "Julia is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science. ",
+         usedFor: " ",
+         url: "https://julialang.org/ "
+     },
+     
+     {
+         id: 19,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Smalltalk",
+         description: "It is a reflective, object-oriented programming language that supports dynamic typing. Alan Kay, Adele Goldberg, Dan Ingalls, Scott Wallace, Ted Kaehler and their associates at Xerox PARC developed Smalltalk. They designed it for educational use and it soon became popular. VisualWorks is a prominent implementation of Smalltalk. Squeak is a programming language that is in the form of an implementation of Smalltalk. Scratch is a visual programming language based on Squeak. ",
+         usedFor: " ",
+         url: "http://objectconnect.com/ "
+     },
+     
+     {
+         id: 20,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Haskell",
+         description: "Named in honor of Haskell Curry, a logician, Haskell is a standardized purely functional language. It supports pattern matching, definable operators, single assignment, algebraic data types and recursive functions. ",
+         usedFor: " ",
+         url: "https://www.haskell.org/ "
+     },
+     {
+        id: 21,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "F#",
+         description: "F Sharp targets the .NET Framework and supports both functional as well as imperative object-oriented programming. Don Syme at the Microsoft Research developed this language, which is now being developed at the Microsoft Developer Division. F Sharp, as it is called, will soon be integrated into the .NET Framework and Visual Studio. ",
+         usedFor: " ",
+         url: "https://fsharp.org/ "
+     },
+     
+     {
+        id: 22,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "JavaScript.",
+         description: "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. ",
+         usedFor: " ",
+         url: "http://www.ecma-international.org/publications-and-standards/standards/ecma-262/ "
+     },
+     
+     {
+        id: 23,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Ruby",
+         description: "The efforts for developing this language initiated in Japan in the 1990s. Similar to Perl, it has a dynamic type system and an automatic memory management. It supports multiple programming paradigms and is a dynamic object-oriented language. ",
+         usedFor: " ",
+         url: "https://www.ruby-lang.org/ "
+     },
+     {
+        id: 24,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "SQL",
+         description: "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system. ",
+         usedFor: " ",
+         url: "https://www.iso.org/standard/63555.html "
+     },
+     {
+       id: 25,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Visual Basic",
+         description: "Visual Basic (VB) Visual Basic (VB) is an event-driven programming language and environment from Microsoft that provides a graphical user interface (GUI) which allows programmers to modify code by simply dragging and dropping objects and defining their behavior and appearance. ",
+         usedFor: " ",
+         url: "https://docs.microsoft.com/en-us/dotnet/visual-basic/ "
+     },
+     {
+       id: 26,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "Eiffel",
+         description: "It is an object-oriented programming language that is ISO-standardized and used to develop extensible and reusable software. It is a development platform for many industries such as finance, aerospace and video gaming. ",
+         usedFor: " ",
+         url: "https://www.eiffel.org/ "
+     },
+     {
+        id: 27,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "TypeScript",
+         description: "TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript. ",
+         usedFor: " ",
+         url: "https://www.typescriptlang.org/ "
+     },
+     {
+         id: 28,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Matlab",
+         description: "It is a numerical computing environment and a programming language that enables matrix computations, function plotting, and algorithm implementation. It can also be used for user interface creation. MathWorks created MATLAB. ",
+         usedFor: " ",
+         url: "https://www.mathworks.com/products/matlab.html "
+     },
+     {
+         id: 29,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "AutoIt",
+         description: "AutoIt is a freeware programming language for Microsoft Windows. In its earliest release, it was primarily intended to create automation scripts for Microsoft Windows programs but has since grown to include enhancements in both programming language design and overall functionality. ",
+         usedFor: " ",
+         url: "https://www.autoitscript.com/site/ "
+     },
+     {
+        id: 30,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150 ",
+         name: "BASIC",
+         description: "Developed by John George Kemeny and Thomas Eugene Kurtz at Dartmouth in 1964, it is an acronym for Beginner’s All-purpose Symbolic Instruction Code. It was designed with the intent of giving the non-science people an access to computers. ",
+         usedFor: " ",
+         url: "https://curlie.org/Computers/Programming/Languages/BASIC "
+     },
+     {
+         id: 31,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Forth",
+         description: "It is a structured imperative programming language, which bases its implementation on stacks. It supports an interactive execution of commands as well as the compilation of sequences of commands. ",
+         usedFor: " ",
+         url: "https://en.m.wikipedia.org/wiki/Forth_(programming_language) "
+     },
+     {
+         id: 32,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Frink",
+         description: "Developed by Alan Eliasen and named after Professor John Frink, a popular fictional character. It is based on the Java Virtual Machine and focuses on science and engineering. Its striking feature is that it tracks the units of measure through all the calculations that enables quantities to contain their units of measurement. ",
+         usedFor: " ",
+         url: "https://frinklang.org/ "
+     },
+     {
+         id: 33,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Lisp",
+         description: "Lisp is the second-oldest high-level programming language in widespread use today. The name Lisp is derived from ‘List Processing Language’. One of the important data structures that Lisp supports is linked list. Lisp programs deal with source code as a data structure. ",
+         usedFor: " ",
+         url: "http://www-formal.stanford.edu/jmc/history/lisp/lisp.html "
+     },
+     {
+         id: 34,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Erlang",
+         description: "It is a concurrent programming language that includes a sequential subset, which supports functional programming. Ericsson developed Erlang as a distributed soft real-time and fault-tolerant language and released it as an open source computer programming language in 1998. It is one of the most popularly used functional programming languages. ",
+         usedFor: " ",
+         url: "http://www.erlang.org/ "
+     },
+     
+     {
+         id: 35,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Charity",
+         description: "It is a purely functional, not-Turing-complete language, which means that all its programs are guaranteed to terminate. Charity was designed at the University of Calgary, a public University in Canada. ",
+         usedFor: " ",
+         url: "https://codelani.com/languages/charity.html "
+     },
+     {
+         id: 36,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Kite",
+         description: "It came up in 2006 with a feature set consisting of a blend of object-oriented and functional programming features. It is a fast-running language. Interestingly, Kite uses the pipe character for functional calls rather than using the period or arrow characters in other languages. ",
+         usedFor: " ",
+         url: " "
+     },
+     {
+         id: 37,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Ada",
+         description: "It is a statically typed, structured, imperative programming language that is based on Pascal. A team of CII Honeywell Bull that was led by Jean Ichbiah developed Ada. The Ada compilers are validated for mission-critical systems. Ada is an internationally standardized computer programming language. ",
+         usedFor: " ",
+         url: " "
+     },
+     {
+         id: 38,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "APL",
+         description: "Named after the book A Programming Language (Iverson, Kenneth E., 1962), APL is an array programming language. It can work simultaneously on multiple arrays of data. It is interpretive, interactive and a functional programming language. ",
+         usedFor: " ",
+         url: " "
+     },
+     {
+         id: 39,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "ICI",
+         description: "Designed by Tim Long in 1992, ICI is a general purpose interpreted computer programming language. It supports dynamic typing, flexible data types and other language constructs similar to C. ",
+         usedFor: " ",
+         url: " "
+     },
+     {
+         id: 40,
+         logo: "https://source.unsplash.com/OtZDVgAqP9A/150x150",
+         name: "Perl",
+         description: "It is a high-level interpreted programming language that supports dynamic programming. It was developed by Larry Wall, a linguist who served as a systems administrator at NASA. It provides the programmers with text processing facilities and has a blend of features adopted from various languages like C, Lisp, and Awk. ",
+         usedFor: " ",
+         url: "https://www.perl.org/ "
+     }
+     
+     
+     ]
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     return (
+       <div>
+       <h3>List of programing languages </h3>
+       
+       
+       
+       
+       <div>
+       <ol>
+       {
+         pLanguages.map((data)=>(
+           <li key={data.id}>
+           
+           <h2>{data.name}</h2>
+           
+           <img src={data.logo} width="150" height="150" />
+           <p>{data.description}</p>
+           <a href={data.url} target="_blank" >
+           <span>👉</span>
+           Official Website.</a>
+           
+           </li>
+           ))
+       }
+       
+       </ol>
+       </div>
+       
+       
+       
+       </div>
+       
+       
+       )
+     
+   
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  function App(){
+  
+    return (
+      
+     <div>
+     
+     <Languages />
+   
+   
+     </div>
+      
+      
+      )
+    
+   
+  }
+  
+  ReactDOM.render(<App />,
+  document.getElementById('root')
+  )
+  
+</script>
+
+
+</body>
+
+</html>
